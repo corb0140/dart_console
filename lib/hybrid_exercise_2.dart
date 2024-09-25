@@ -2,12 +2,12 @@ import "dart:io";
 import 'dart:math';
 
 class Lucky {
+  late int min, max;
   late int randomNumber;
 
-  int min = int.parse(Platform.environment['MIN'] ?? '10');
-  int max = int.parse(Platform.environment['MAX'] ?? '100');
-
-  Lucky(int min, int max) {
+  Lucky() {
+    min = int.parse(Platform.environment['MIN'] ?? '10');
+    max = int.parse(Platform.environment['MAX'] ?? '100');
     randomNumber = Random().nextInt(max - min) + min;
   }
 }
