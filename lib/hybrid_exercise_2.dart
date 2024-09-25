@@ -4,7 +4,7 @@ import 'dart:math';
 class Lucky {
   late int randomNumber;
 
-  int min = int.parse(Platform.environment['MIN'] ?? '0');
+  int min = int.parse(Platform.environment['MIN'] ?? '10');
   int max = int.parse(Platform.environment['MAX'] ?? '100');
 
   Lucky(int min, int max) {
